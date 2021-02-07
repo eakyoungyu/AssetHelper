@@ -1,11 +1,13 @@
+# -*- coding: utf-8 -*- 
 from readFile import *
+from parsing import *
 
 file_name = "KakaoTalkChats.txt"
 
 def main():
-	lines = read_file(file_name)
-	for line in lines:
-		print(line)
+	lines = read_stock_file(file_name)
+	print("parsing!!!")
+	parsing(lines)
 
 
 

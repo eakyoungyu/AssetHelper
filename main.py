@@ -2,10 +2,12 @@
 from readFile import *
 from parsing import *
 
-file_name = "KakaoTalkChats.txt"
+stock_text_file_name = "files/KakaoTalkChats.txt"
+mystock_spreadsheel_url = "https://docs.google.com/spreadsheets/d/1mF0hjhNsDkfVe71jIcEx_UwHJUZJBkrc9C9_PYYiUJc/edit#gid=0"
 
 def main():
-	lines = read_stock_file(file_name)
+	ticker_table = read_spreadsheet(mystock_spreadsheel_url)
+	lines = read_stock_file(stock_text_file_name)
 	print("parsing!!!")
 	parsing(lines)
 
@@ -13,3 +15,5 @@ def main():
 
 if __name__ == "__main__":
 	main()
+
+
